@@ -5,7 +5,7 @@ import { data, fetchAllCommandNames } from "../../api";
 
 import styles from './CommandSelector.module.css';
 
-const CommandSelector = ({ handleCommandChange }) => {
+const CommandSelector = async ({ handleCommandChange }) => {
 
 
 
@@ -28,12 +28,13 @@ const CommandSelector = ({ handleCommandChange }) => {
                 <option aria-label="Commands" value="" />
                 <optgroup label="Basic">
 
-                    {fetchAllCommandNames.map((command, i) => (
-                        <option key={i} value={command}>
-                            {command}
-                        </option>)
-                    )
-                    }
+                    try {
+                        fetchAllCommandNames().then([command] =>
+                            <option value={command}>
+                        {command}
+                    </option>
+                        )}
+
                 </optgroup>
 
                 <optgroup label="Mod">
