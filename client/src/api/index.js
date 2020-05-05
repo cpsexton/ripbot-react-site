@@ -1,50 +1,51 @@
 //this holds all the commands and definitions
 
-// export const data = {
+export const data = {
 
-//     hello: {
-//         name: 'hello',
-//         desc: 'get a whatup from your boy',
-//         image: '../images/hello-command-demo.gif',
-//         role: 'basic'
-//     },
-//     covid: {
-//         name: 'covid',
-//         desc: 'get the latest Covid-19 numbers sourced from the CDC',
-//         image: '../images/covid-command-demo.gif',
-//         role: 'basic'
-//     },
-//     uptime: {
-//         name: 'uptime',
-//         desc: 'find out how long RipBot has been running',
-//         image: '../images/uptime-command-demo.gif',
-//         role: 'basic'
-//     },
-//     mute: {
-//         name: 'mute',
-//         desc: 'mutes a member',
-//         image: '../images/mute-command-demo-start.gif',
-//         role: 'mod'
-//     },
-//     timer: {
-//         name: 'timer',
-//         desc: 'set a timer',
-//         image: '../images/timer-command-demo.gif',
-//         role: 'mod'
-//     },
-//     pfp: {
-//         name: 'pfp',
-//         desc: 'take a look at a members profile picture',
-//         image: '../images/pfp-command-demo.gif',
-//         role: 'admin'
-//     },
-//     ping: {
-//         name: 'ping',
-//         desc: 'ping the server',
-//         image: '../images/ping-command-demo.gif',
-//         role: 'admin'
-//     }
-// }
+
+    hello: {
+        name: 'hello',
+        desc: 'get a whatup from your boy',
+        image: '../images/hello-command-demo.gif',
+        role: 'basic'
+    },
+    covid: {
+        name: 'covid',
+        desc: 'get the latest Covid-19 numbers sourced from the CDC',
+        image: '../images/covid-command-demo.gif',
+        role: 'basic'
+    },
+    uptime: {
+        name: 'uptime',
+        desc: 'find out how long RipBot has been running',
+        image: '../images/uptime-command-demo.gif',
+        role: 'basic'
+    },
+    mute: {
+        name: 'mute',
+        desc: 'mutes a member',
+        image: '../images/mute-command-demo-start.gif',
+        role: 'mod'
+    },
+    timer: {
+        name: 'timer',
+        desc: 'set a timer',
+        image: '../images/timer-command-demo.gif',
+        role: 'mod'
+    },
+    pfp: {
+        name: 'pfp',
+        desc: 'take a look at a members profile picture',
+        image: '../images/pfp-command-demo.gif',
+        role: 'admin'
+    },
+    ping: {
+        name: 'ping',
+        desc: 'ping the server',
+        image: '../images/ping-command-demo.gif',
+        role: 'admin'
+    }
+}
 
 
 
