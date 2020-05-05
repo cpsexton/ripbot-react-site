@@ -25,6 +25,7 @@ const Cards = ({ command }) => {
                         <Typography variant="h3" color="textSecondary" gutterBottom>
                             {command}
                         </Typography>
+                        <Divider variant="middle" />
                         <Typography variant='body2'>
                             command commandcommand this is some typing and stuffff whats is thoin
                         </Typography>
