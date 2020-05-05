@@ -1,11 +1,11 @@
 import React from 'react';
 import { FormControl, InputLabel, Select } from '@material-ui/core';
-import { data, fetchAllCommandNames } from "../../api";
+import { basic, mod, admin } from "../../api";
 
 
 import styles from './CommandSelector.module.css';
 
-const CommandSelector = async ({ handleCommandChange }) => {
+const CommandSelector = ({ handleCommandChange }) => {
 
 
 
@@ -18,34 +18,28 @@ const CommandSelector = async ({ handleCommandChange }) => {
                 defaultValue=""
                 id="grouped native-select"
                 onChange={
-
-
-                    (e) => (console.log(e.target), fetchAllCommandNames())
-                    // (e) => handleCommandChange(e.target.value)
-                } //filter the descrip in commandchange
+                    (e) => (console.log(e.target.value), handleCommandChange(e.target.value))
+                }
             >
 
                 <option aria-label="Commands" value="" />
                 <optgroup label="Basic">
-
-                    try {
-                        fetchAllCommandNames().then([command] =>
-                            <option value={command}>
-                        {command}
-                    </option>
-                        )}
-
+                    {basic.map((command, i) => (
+                        <option key={i} value={command}>
+                            {command}
+                        </option>
+                    ))}
                 </optgroup>
 
                 <optgroup label="Mod">
-                    {Object.keys(data).map((command, i) => (
+                    {mod.map((command, i) => (
                         <option key={i} value={command}>
                             {command}
                         </option>
                     ))}
                 </optgroup>
                 <optgroup label="Admin">
-                    {Object.keys(data).map((command, i) => (
+                    {admin.map((command, i) => (
                         <option key={i} value={command}>
                             {command}
                         </option>
@@ -54,9 +48,6 @@ const CommandSelector = async ({ handleCommandChange }) => {
 
             </Select>
         </FormControl>
-
-
-
     )
 }
 

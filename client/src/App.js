@@ -8,28 +8,26 @@ import styles from './App.module.css';
 
 class App extends React.Component {
     state = {
-        command: '',
-        description: '',
-        image: ''
+        command: ''
     }
 
 
 
-    handleCommandChange = (command, description, image) => {
+    handleCommandChange = async (command) => {
 
 
-        this.setState({ command: command, description: description, image: image })
+        this.setState({ command: command })
     }
 
     render() {
-        const { command, description, image } = this.state;
+        const { command } = this.state;
         return (
             <div className={styles.container}>
                 <Typography color="primary" variant="h1">RipBot</Typography>
 
                 <CommandSelector handleCommandChange={this.handleCommandChange} />
 
-                <Cards command={command} description={description} image={image} />
+                <Cards command={command} />
             </div>
         )
     }
