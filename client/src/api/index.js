@@ -6,45 +6,45 @@ const data = [
 
     {
         name: 'hello',
-        desc: 'get a whatup from your boy',
-        image: '../../images/hello-command-demo.gif',
+        desc: `When RipBot hears the **hello** command, it will respond by ***reacting*** to the original post with emojis spelling what up `,
+        image: 'helloGif',
         role: 'basic'
     },
     {
         name: 'covid',
         desc: 'get the latest Covid-19 numbers sourced from the CDC',
-        image: '../../images/covid-command-demo.gif',
+        image: 'covidGif',
         role: 'basic'
     },
     {
         name: 'uptime',
         desc: 'find out how long RipBot has been running',
-        image: '../../images/uptime-command-demo.gif',
+        image: 'uptimeGif',
         role: 'basic'
     },
     {
         name: 'mute',
         desc: 'mutes a member',
-        image: '../../images/mute-command-demo-start.gif',
+        image: 'muteGif',
         role: 'mod'
     },
     {
         name: 'timer',
         desc: 'set a timer',
-        image: '../../images/timer-command-demo.gif',
-        role: 'mod'
+        image: 'timerGif',
+        role: 'basic'
     },
     {
         name: 'pfp',
         desc: 'take a look at a members profile picture',
-        image: '../../images/pfp-command-demo.gif',
-        role: 'admin'
+        image: 'pfpGif',
+        role: 'basic'
     },
     {
         name: 'ping',
         desc: 'ping the server',
-        image: '../../images/ping-command-demo.gif',
-        role: 'admin'
+        image: 'pingGif',
+        role: 'basic'
     }
 ];
 
