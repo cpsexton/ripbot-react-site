@@ -6,45 +6,46 @@ const data = [
 
     {
         name: 'hello',
-        desc: 'When RipBot hears the hello command, it will respond by asynchronously adding reactions to the original post with emojis spelling what up ',
+        desc: "When RipBot hears the hello command, it will respond by asynchronously adding reactions to the original post with emojis spelling 'what up' ",
         image: 'helloGif',
-        role: 'basic'
+        role: "BASIC. Any user in the Discord channel may use this command",
+        code: 'helloCode'
     },
     {
         name: 'covid',
         desc: 'get the latest Covid-19 numbers sourced from the CDC',
         image: 'covidGif',
-        role: 'basic'
+        role: 'BASIC. Any user in the Discord channel may use this command'
     },
     {
         name: 'uptime',
-        desc: 'find out how long RipBot has been running',
+        desc: "When RipBot recognizes the uptime command, it will respond with an embed message containing how long it has been live. Response time is seperated in hours, minutes and seconds",
         image: 'uptimeGif',
-        role: 'basic'
+        role: 'BASIC. Any user in the Discord channel may use this command'
     },
     {
         name: 'mute',
         desc: 'mutes a member',
         image: 'muteGif',
-        role: 'mod'
+        role: "Mod. Only user's with mod privileges may use this command"
     },
     {
         name: 'timer',
         desc: 'set a timer',
         image: 'timerGif',
-        role: 'basic'
+        role: 'BASIC. Any user in the Discord channel may use this command'
     },
     {
         name: 'pfp',
         desc: 'take a look at a members profile picture',
         image: 'pfpGif',
-        role: 'basic'
+        role: 'BASIC. Any user in the Discord channel may use this command'
     },
     {
         name: 'ping',
         desc: 'ping the server',
         image: 'pingGif',
-        role: 'basic'
+        role: 'BASIC. Any user in the Discord channel may use this command'
     }
 ];
 

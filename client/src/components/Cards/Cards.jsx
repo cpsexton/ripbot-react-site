@@ -1,32 +1,58 @@
 import React from 'react';
-import { Card, CardContent, Typography, Grid, Divider } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid, Divider, makeStyles, Fade, Fab } from "@material-ui/core";
 import cx from "classnames";
-
+import CodeIcon from '@material-ui/icons/Code';
 import styles from './Cards.module.css';
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+        height: 180,
+    },
+    container: {
+        display: 'flex',
+    },
+    svg: {
+        width: 100,
+        height: 100
+    },
+    polygon: {
+        fill: theme.palette.common.white,
+        stroke: theme.palette.divider,
+        strokeWidth: 1,
+    },
+}));
 
 const Cards = ({ command, desc, image, role }) => {
-    let Theimage;
+    const classes = useStyles();
+    const [clicked, setClicked] = React.useState(false);
+    const handleChange = () => {
+        setClicked((prev) => !prev);
+    };
+    let imageGif;
+    let imageCode;
 
     if (!command) {
         return "Loading..."; //temporary placeholder for welcome card which should be gifs of some kind
     };
 
     if (image === 'helloGif') {
-        Theimage = require('../../images/hello-command-demo.gif')
+        imageGif = require('../../images/hello-command-demo.gif')
+        imageCode = require('../../images/hello-command-code-preview.png')
     } else if (image === 'pfpGif') {
-        Theimage = require('../../images/pfp-command-demo.gif')
+        imageGif = require('../../images/pfp-command-demo.gif')
+        imageCode = require('../../images/pfp-command-code-preview.png')
     } else if (image === 'pingGif') {
-        Theimage = require('../../images/ping-command-demo.gif')
+        imageGif = require('../../images/ping-command-demo.gif')
     } else if (image === 'timerGif') {
-        Theimage = require('../../images/timer-command-demo.gif')
+        imageGif = require('../../images/timer-command-demo.gif')
     } else if (image === 'muteGif') {
-        Theimage = require('../../images/mute-command-demo-start.gif')
+        imageGif = require('../../images/mute-command-demo-start.gif')
     } else if (image === 'uptimeGif') {
-        Theimage = require('../../images/uptime-command-demo.gif')
+        imageGif = require('../../images/uptime-command-demo.gif')
     } else if (image === 'covidGif') {
-        Theimage = require('../../images/covid-command-demo.gif')
+        imageGif = require('../../images/covid-command-demo.gif')
     }
+
 
 
     return (
@@ -53,7 +79,7 @@ const Cards = ({ command, desc, image, role }) => {
                             {desc}
                         </Typography>
                         <Typography variant='h5'>
-                            Role:
+                            Required Role:
                         </Typography>
                         <Typography variant='h6'>
                             {role}
@@ -73,7 +99,16 @@ const Cards = ({ command, desc, image, role }) => {
                         </Typography>
                         <Divider variant="middle" />
                         <br />
-                        <img className={styles.image} src={Theimage} alt="testimage" />
+                        <img className={styles.image} src={imageGif} alt="imagegif" />
+
+
+                        <Fab className={styles.deaths} color='default' aria-label='code' size="small" onClick={((e) => (handleChange(e.target.value)))}  >
+                            <CodeIcon />
+                        </Fab>
+
+                        <Fade in={clicked}>
+                            <img className={classes.image} src={imageCode} alt="imagecode" />
+                        </Fade>
 
                     </CardContent>
                 </Grid>

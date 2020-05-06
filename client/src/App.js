@@ -11,7 +11,8 @@ class App extends React.Component {
         command: '',
         desc: '',
         image: '',
-        role: ''
+        role: '',
+        code: ''
     }
 
     // componentDidMount() {
@@ -20,22 +21,22 @@ class App extends React.Component {
     // }
 
     handleCommandChange = async (command) => {
-        const { name, desc, image, role } = await fetchData(command);
+        const { name, desc, image, role, code } = await fetchData(command);
 
-        this.setState({ command: name, desc: desc, image: image, role: role });
+        this.setState({ command: name, desc: desc, image: image, role: role, code: code });
 
         console.log(this.state)
     }
 
     render() {
-        const { command, desc, image, role } = this.state;
+        const { command, desc, image, role, code } = this.state;
         return (
             <div className={styles.container}>
                 <Typography color="primary" variant="h1">RipBot</Typography>
 
                 <CommandSelector handleCommandChange={this.handleCommandChange} />
 
-                <Cards command={command} desc={desc} image={image} role={role} />
+                <Cards command={command} desc={desc} image={image} role={role} code={code} />
             </div>
         )
     }
