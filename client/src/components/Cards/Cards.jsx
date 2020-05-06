@@ -38,15 +38,24 @@ const Cards = ({ command, desc, image, role }) => {
                     component={Card}
                     xs={12}
                     md={3}
-                    className={cx(styles.card, styles.demonstration)}
+                    className={cx(styles.card, styles.details)}
                 >
                     <CardContent>
-                        <Typography variant="h3" color="textSecondary" gutterBottom>
+                        <Typography variant="h3" color="textSecondary" >
                             {command}
                         </Typography>
                         <Divider variant="middle" />
-                        <Typography variant='body2'>
+                        <br />
+                        <Typography variant='h5'>
+                            Description:
+                        </Typography>
+                        <Typography variant='h6' paragraph>
                             {desc}
+                        </Typography>
+                        <Typography variant='h5'>
+                            Role:
+                        </Typography>
+                        <Typography variant='h6'>
                             {role}
                         </Typography>
                     </CardContent>
@@ -56,14 +65,14 @@ const Cards = ({ command, desc, image, role }) => {
                     component={Card}
                     xs={12}
                     md={5}
-                    className={cx(styles.card, styles.infected)}
+                    className={cx(styles.card, styles.demonstration)}
                 >
                     <CardContent>
-                        <Typography variant="h3" color="textSecondary" gutterBottom>
+                        <Typography variant="h3" color="textSecondary" >
                             {command}
                         </Typography>
                         <Divider variant="middle" />
-
+                        <br />
                         <img className={styles.image} src={Theimage} alt="testimage" />
 
                     </CardContent>

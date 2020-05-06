@@ -6,7 +6,7 @@ const data = [
 
     {
         name: 'hello',
-        desc: `When RipBot hears the **hello** command, it will respond by ***reacting*** to the original post with emojis spelling what up `,
+        desc: 'When RipBot hears the hello command, it will respond by asynchronously adding reactions to the original post with emojis spelling what up ',
         image: 'helloGif',
         role: 'basic'
     },
