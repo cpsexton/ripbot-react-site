@@ -8,8 +8,10 @@ import styles from './App.module.css';
 
 class App extends React.Component {
     state = {
-        data: {},
-        command: ''
+        command: '',
+        desc: '',
+        image: '',
+        role: ''
     }
 
     // componentDidMount() {
@@ -18,21 +20,22 @@ class App extends React.Component {
     // }
 
     handleCommandChange = async (command) => {
-        const fetchedData = await fetchData(command)
+        const { name, desc, image, role } = await fetchData(command);
 
-        this.setState({ data: fetchedData, command: command })
+        this.setState({ command: name, desc: desc, image: image, role: role });
+
         console.log(this.state)
     }
 
     render() {
-        const { command, data } = this.state;
+        const { command, desc, image, role } = this.state;
         return (
             <div className={styles.container}>
                 <Typography color="primary" variant="h1">RipBot</Typography>
 
                 <CommandSelector handleCommandChange={this.handleCommandChange} />
 
-                <Cards command={command} data={data} />
+                <Cards command={command} desc={desc} image={image} role={role} />
             </div>
         )
     }

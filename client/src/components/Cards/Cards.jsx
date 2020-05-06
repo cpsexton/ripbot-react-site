@@ -3,12 +3,13 @@ import { Card, CardContent, Typography, Grid, Divider } from "@material-ui/core"
 import cx from "classnames";
 
 import styles from './Cards.module.css';
-import testImage from '../../images/uptime-command-demo.gif';
 
-const Cards = ({ command }) => {
+
+
+const Cards = ({ command, desc, image, role }) => {
     if (!command) {
         return "Loading..."; //temporary placeholder for welcome card which should be gifs of some kind
-    }
+    };
 
     return (
         <div className={styles.container}>
@@ -27,7 +28,8 @@ const Cards = ({ command }) => {
                         </Typography>
                         <Divider variant="middle" />
                         <Typography variant='body2'>
-                            command commandcommand this is some typing and stuffff whats is thoin
+                            {desc}
+                            {role}
                         </Typography>
                     </CardContent>
                 </Grid>
@@ -46,7 +48,7 @@ const Cards = ({ command }) => {
                         <Typography variant='body2'>
                             command infotion command information
                         </Typography>
-                        <img className={styles.image} src={testImage} alt="testimage" width="100%" />
+                        <img className={styles.image} src={image} alt="testimage" width="100%" />
 
                     </CardContent>
                 </Grid>

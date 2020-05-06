@@ -9,6 +9,7 @@ const CommandSelector = ({ handleCommandChange }) => {
 
 
 
+
     return (
 
         <FormControl className={styles.formControl}>
@@ -18,12 +19,15 @@ const CommandSelector = ({ handleCommandChange }) => {
                 defaultValue=""
                 id="grouped native-select"
                 onChange={
-                    (e) => (console.log('Command selected from menu was ' + e.target.value), handleCommandChange(e.target.value))
+                    (e) => (
+
+                        console.log('Command selected from menu was: ' + e.target.value),
+                        handleCommandChange(e.target.value)
+                    )
                 }
             >
 
                 <option aria-label="Commands" value="" />
-
 
 
                 <optgroup label="Basic">
@@ -51,7 +55,7 @@ const CommandSelector = ({ handleCommandChange }) => {
                 </optgroup>
 
             </Select>
-        </FormControl>
+        </FormControl >
     )
 }
 
