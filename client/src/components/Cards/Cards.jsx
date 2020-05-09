@@ -1,29 +1,17 @@
 import React from 'react';
-import { Card, CardContent, Typography, Grid, Divider, makeStyles, Fade, Fab } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid, Divider, Fade, Fab, Tooltip } from "@material-ui/core";
 import cx from "classnames";
 import CodeIcon from '@material-ui/icons/Code';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import styles from './Cards.module.css';
+const landingImage = require("../../images/RipBot-wall-art.jpg");
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        height: 180,
-    },
-    container: {
-        display: 'flex',
-    },
-    svg: {
-        width: 100,
-        height: 100
-    },
-    polygon: {
-        fill: theme.palette.common.white,
-        stroke: theme.palette.divider,
-        strokeWidth: 1,
-    },
-}));
+const Cards = ({ command, desc, image, role, syntax }) => {
 
-const Cards = ({ command, desc, image, role }) => {
-    const classes = useStyles();
+    const signature = (<Typography className={styles.author} color='palette.secondary.dark' variant="caption" >
+        made with love by Chris Sexton
+    </Typography>);
+
     const [clicked, setClicked] = React.useState(false);
     const handleChange = () => {
         setClicked((prev) => !prev);
@@ -32,7 +20,11 @@ const Cards = ({ command, desc, image, role }) => {
     let imageCode;
 
     if (!command) {
-        return "Loading..."; //temporary placeholder for welcome card which should be gifs of some kind
+        return (
+            <Typography className={styles.author} color='palette.secondary.dark' variant="caption" >
+                Select a command to experience some of the cleanest and sexiest node.js code...
+            </Typography>
+        )
     };
 
     if (image === 'helloGif') {
@@ -53,18 +45,19 @@ const Cards = ({ command, desc, image, role }) => {
         imageGif = require('../../images/covid-command-demo.gif')
     }
 
-
-
     return (
-        <div className={styles.container}>
-            <Grid container spacing={3} justify="center">
+        <div className={cx(styles.container)}>
+            <Grid container spacing={1} justify="center">
 
+                {/* DETAILS CARD */}
+                {/* DETAILS CARD */}
                 <Grid
                     item
                     component={Card}
                     xs={12}
                     md={3}
                     className={cx(styles.card, styles.details)}
+                    zeroMinWidth
                 >
                     <CardContent>
                         <Typography variant="h3" color="textSecondary" >
@@ -86,6 +79,9 @@ const Cards = ({ command, desc, image, role }) => {
                         </Typography>
                     </CardContent>
                 </Grid>
+
+                {/* DEMONSTRATION GIF CARD */}
+                {/* DEMONSTRATION GIF CARD */}
                 <Grid
                     item
                     component={Card}
@@ -94,29 +90,42 @@ const Cards = ({ command, desc, image, role }) => {
                     className={cx(styles.card, styles.demonstration)}
                 >
                     <CardContent>
-                        <Typography variant="h3" color="textSecondary" >
-                            {command}
+                        <Typography variant="h5" color="textSecondary" >
+                            {syntax}
                         </Typography>
                         <Divider variant="middle" />
                         <br />
                         <img className={styles.image} src={imageGif} alt="imagegif" />
-
-
-                        <Fab className={styles.deaths} color='default' aria-label='code' size="small" onClick={((e) => (handleChange(e.target.value)))}  >
-                            <CodeIcon />
-                        </Fab>
-
-                        <Fade in={clicked}>
-                            <img className={classes.image} src={imageCode} alt="imagecode" />
-                        </Fade>
-
                     </CardContent>
                 </Grid>
 
+                {/* CODE PREVIEW CARD */}
+                {/* CODE PREVIEW CARD */}
+                <Fade in={clicked}>
+                    <Grid
+                        item
+                        component={Card}
+                        xs={12}
+                        md={5}
+                        className={cx(styles.card, styles.code)}
+                    >
+                        <CardContent>
+                            <img className={styles.image} src={imageCode} alt="imagecode" />
+                        </ CardContent>
+                    </ Grid>
+                </Fade>
 
-            </Grid>
-
-
+                {/* SOURCE CODE BUTTON */}
+                {/* SOURCE CODE BUTTON */}
+                <Tooltip title="peep the source code" >
+                    <Fab className={styles.button} color='default' aria-label='code' size="small" onClick={((e) => (handleChange(e.target.value)))}  >
+                        <CodeIcon />
+                    </Fab>
+                </ Tooltip>
+            </ Grid>
+            <Typography className={styles.author} variant="caption" >
+                made with <FavoriteBorderIcon /> by Chris Sexton
+            </Typography>
 
         </div >
     )

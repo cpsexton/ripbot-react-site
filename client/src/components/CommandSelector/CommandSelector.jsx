@@ -3,15 +3,12 @@ import { FormControl, InputLabel, Select } from '@material-ui/core';
 import { basic, mod, admin } from "../../api";
 
 
+
 import styles from './CommandSelector.module.css';
 
 const CommandSelector = ({ handleCommandChange }) => {
 
-
-
-
     return (
-
         <FormControl className={styles.formControl}>
             <InputLabel htmlFor="grouped-native-select">commands</InputLabel>
             <Select
@@ -20,7 +17,6 @@ const CommandSelector = ({ handleCommandChange }) => {
                 id="grouped native-select"
                 onChange={
                     (e) => (
-
                         console.log('Command selected from menu was: ' + e.target.value),
                         handleCommandChange(e.target.value)
                     )
@@ -28,7 +24,6 @@ const CommandSelector = ({ handleCommandChange }) => {
             >
 
                 <option aria-label="Commands" value="" />
-
 
                 <optgroup label="Basic">
                     {basic.map((command, index) => (

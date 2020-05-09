@@ -1,31 +1,48 @@
 .container {
-	margin: 50px 0;
+	margin: 1px 0;
+	background-color: #2A363B;
 }
 
 .card {
-	margin: 0 2% !important;
-}
-
-.demonstration {
-	border-bottom: 10px solid rgba(0, 0, 255, 0.5);
+	margin: 1% 1% !important;
 }
 
 .details {
-	border-bottom: 10px solid rgba(0, 255, 0, 0.5);
+	border-left: 10px solid #99B898;
+	border-right: 10px solid #99B898;
 }
 
-.deaths {
+.demonstration {
+	border-left: 10px solid #FF847C;
+	border-right: 10px solid #FF847C;
+}
+
+.code {
+	border-left: 10px solid #FECEA8;
+	border-right: 10px solid #FECEA8;
+}
+
+.button {
 	float: right;
+}
+
+.image {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.author {
+	float: bottom;
+	float: right;
+	color: ghostwhite;
+}
+
+.landingimage {
+	max-width: 770px;
 }
 
 @media (max-width: 770px) {
 	.card {
 		margin: 2% 0 !important;
 	}
-}
-
-
-.image {
-	width: 100%;
-	margin-top: 10px;
 }
