@@ -2,8 +2,6 @@ import React from 'react';
 import { FormControl, InputLabel, Select } from '@material-ui/core';
 import { basic, mod, admin } from "../../api";
 
-
-
 import styles from './CommandSelector.module.css';
 
 const CommandSelector = ({ handleCommandChange }) => {

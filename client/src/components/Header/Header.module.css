@@ -1,8 +1,11 @@
-.container {
-    width: 100%;
-    
+.title {
+    margin-right: 10px !important;
 }
 
-.button {
-    margin-left: 90rem;
+
+.appbar {
+    background-color: #E84A5F;
+    /* background-color: #6F213B; */
+   
+    justify-content: center;
 }

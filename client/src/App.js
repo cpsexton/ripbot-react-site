@@ -34,8 +34,8 @@ class App extends React.Component {
             <div className={styles.container}>
                 {/* <Typography color="primary" variant="h1">RipBot</Typography> */}
                 {/* <img src={wallArt} alt='ripbot wall art image' className={styles.banner} /> */}
-                <Header wallArt />
-                <CommandSelector handleCommandChange={this.handleCommandChange} />
+                <Header handleCommandChange={this.handleCommandChange} />
+                {/* <CommandSelector handleCommandChange={this.handleCommandChange} /> */}
                 <Cards command={name} desc={desc} image={image} role={role} syntax={syntax} />
             </div>
         )

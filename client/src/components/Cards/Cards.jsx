@@ -8,10 +8,6 @@ const landingImage = require("../../images/RipBot-wall-art.jpg");
 
 const Cards = ({ command, desc, image, role, syntax }) => {
 
-    const signature = (<Typography className={styles.author} color='palette.secondary.dark' variant="caption" >
-        made with love by Chris Sexton
-    </Typography>);
-
     const [clicked, setClicked] = React.useState(false);
     const handleChange = () => {
         setClicked((prev) => !prev);
