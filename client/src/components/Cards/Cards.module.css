@@ -8,6 +8,15 @@
 	margin: 1% 1% !important;
 }
 
+.discordlogo {
+	width: 30% !important;
+}
+
+.placeholder {
+	color: ghostwhite;
+	margin: 30px 30px !important;
+}
+
 .details {
 	border-left: 10px solid #99B898;
 	border-right: 10px solid #99B898;
@@ -23,19 +32,16 @@
 	border-right: 10px solid #FECEA8;
 }
 
-.button {
-	float: right;
-}
-
 .image {
 	margin-top: 10px;
-	width: 100%;
+	max-width: 100%;
 }
 
 .author {
 	float: bottom;
 	float: right;
 	color: ghostwhite;
+	margin: 5px !important;
 }
 
 .landingimage {

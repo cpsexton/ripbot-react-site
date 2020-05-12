@@ -15,11 +15,20 @@ const Cards = ({ command, desc, image, role, syntax }) => {
     let imageGif;
     let imageCode;
 
+    const discordLogoLong = require('../../images/discord-logo-long.png')
+
     if (!command) {
         return (
-            <Typography className={styles.author} color='palette.secondary.dark' variant="caption" >
-                Select a command to experience some of the cleanest and sexiest node.js code...
-            </Typography>
+            <div >
+                <Typography className={styles.placeholder} variant="h5" >
+                    Select a command to see how RipBot works...
+                </Typography>
+                <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
+
+                <Typography className={styles.discord} variant="h6" >
+                    DISCORD: A new way to chat with your communities and friends. Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
+                </Typography>
+            </div>
         )
     };
 
@@ -53,7 +62,6 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                     xs={12}
                     md={3}
                     className={cx(styles.card, styles.details)}
-                    zeroMinWidth
                 >
                     <CardContent>
                         <Typography variant="h3" color="textSecondary" >

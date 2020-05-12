@@ -94,6 +94,7 @@ export const fetchData = (command) => {
     return { command, desc, image, role, syntax }
 }
 
+export const featured = ['', '', '', '', '']
 export const basic = ['hello', 'pfp', 'serverinfo', 'rolldice', 'online', 'poll', 'date', 'timer', 'ping', 'uptime', 'whois', 'covid'];
 export const mod = ['kick', 'ban', 'unban', 'prune', 'mute', 'warn'];
 export const admin = ['sLogOn', 'sLogOff', 'status', 'kill', 'activity'];

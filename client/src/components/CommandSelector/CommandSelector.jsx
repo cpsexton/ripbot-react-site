@@ -23,6 +23,10 @@ const CommandSelector = ({ handleCommandChange }) => {
 
                 <option aria-label="Commands" value="" />
 
+                <optgroup label="Featured">
+                    <option>impressive commands</option>
+                </optgroup>
+
                 <optgroup label="Basic">
                     {basic.map((command, index) => (
                         <option key={index} value={command}>
