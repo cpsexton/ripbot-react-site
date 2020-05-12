@@ -19,16 +19,48 @@ const Cards = ({ command, desc, image, role, syntax }) => {
 
     if (!command) {
         return (
-            <div >
+            <Grid container spacing={1} direction='column' alignItems='center' className={styles.container}>
+
                 <Typography className={styles.placeholder} variant="h5" >
                     Select a command to see how RipBot works...
                 </Typography>
-                <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
+                <Grid
+                    item
+                    component={Card}
+                    xs={12}
+                    md={5}
+                    className={cx(styles.card, styles.details)}
+                >
+                    <CardContent>
+                        <Typography variant='h3' > RIPBOT </Typography>
+                        <Divider variant="middle" />
+                        <br />
+                        <Typography variant='h5'> What is RipBot: </Typography>
+                        <Typography variant='h6' paragraph>
+                            RipBot is a Discord bot created by me, Chris Sexton. RipBot was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API. The bot is hosted on Heroku and works in any discord server. The bot provides assistance moderating your discord channel, along with a variety of informative and useful commands for all users. The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.
+                        </Typography>
+                        <Divider variant="middle" />
+                    </CardContent>
 
-                <Typography className={styles.discord} variant="h6" >
-                    DISCORD: A new way to chat with your communities and friends. Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
-                </Typography>
-            </div>
+                    <CardContent>
+                        <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
+                        <Divider variant="middle" />
+                        <br />
+                        <Typography variant='h5'>
+                            What is Discord:
+                        </Typography>
+                        <Typography variant='h6' paragraph>
+                            A new way to chat with your communities and friends. Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
+                        </Typography>
+
+                        <Typography variant="caption" >
+                            source discord.com
+                        </Typography>
+                    </CardContent>
+
+                </Grid>
+
+            </Grid>
         )
     };
 
@@ -90,7 +122,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                     item
                     component={Card}
                     xs={12}
-                    md={5}
+                    md={'auto'}
                     className={cx(styles.card, styles.demonstration)}
                 >
                     <CardContent>
@@ -110,7 +142,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                         item
                         component={Card}
                         xs={12}
-                        md={5}
+                        md={'auto'}
                         className={cx(styles.card, styles.code)}
                     >
                         <CardContent>
