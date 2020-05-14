@@ -32,12 +32,12 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                     className={cx(styles.card, styles.details)}
                 >
                     <CardContent>
-                        <Typography variant='h3' > RIPBOT </Typography>
+                        <Typography variant='h3' > RipBot </Typography>
                         <Divider variant="middle" />
                         <br />
                         <Typography variant='h5'> What is RipBot: </Typography>
                         <Typography variant='h6' paragraph>
-                            RipBot is a Discord bot created by me, Chris Sexton. RipBot was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API. The bot is hosted on Heroku and works in any discord server. The bot provides assistance moderating your discord channel, along with a variety of informative and useful commands for all users. The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.
+                            RipBot (RB) is a Discord bot created by me, Chris Sexton. RB was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API. RB is hosted on Heroku and works in any discord server. RB provides assistance moderating your discord channel, along with a variety of informative and useful commands for all users. The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.
                         </Typography>
                         <Divider variant="middle" />
                     </CardContent>
@@ -76,10 +76,24 @@ const Cards = ({ command, desc, image, role, syntax }) => {
         imageGif = require('../../images/timer-command-demo.gif')
     } else if (image === 'muteGif') {
         imageGif = require('../../images/mute-command-demo-start.gif')
+        imageCode = require('../../images/mute-command-code-preview.png')
     } else if (image === 'uptimeGif') {
         imageGif = require('../../images/uptime-command-demo.gif')
     } else if (image === 'covidGif') {
         imageGif = require('../../images/covid-command-demo.gif')
+        imageCode = require('../../images/covid-command-code-preview.png')
+    } else if (image === 'pollGif') {
+        imageGif = require('../../images/poll-command-demo.gif')
+        imageCode = require('../../images/poll-command-code-preview.png')
+    } else if (image === 'rdiceGif') {
+        imageGif = require('../../images/rolldice-command-demo.gif')
+        imageCode = require('../../images/rolldice-command-code-preview.png')
+    } else if (image === 'activityGif') {
+        imageGif = require('../../images/activity-command-demo.gif')
+        imageCode = require('../../images/activity-command-code-preview.png')
+    } else if (image === 'pruneGif') {
+        imageGif = require('../../images/prune-command-demo.gif')
+        imageCode = require('../../images/prune-command-code-preview.png')
     }
 
     return (

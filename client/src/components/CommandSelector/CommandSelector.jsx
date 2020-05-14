@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormControl, InputLabel, Select } from '@material-ui/core';
-import { basic, mod, admin } from "../../api";
+import { basic, mod, admin, featured } from "../../api";
 
 import styles from './CommandSelector.module.css';
 
@@ -24,19 +24,15 @@ const CommandSelector = ({ handleCommandChange }) => {
                 <option aria-label="Commands" value="" />
 
                 <optgroup label="Featured">
-                    <option>impressive commands</option>
-                </optgroup>
-
-                <optgroup label="Basic">
-                    {basic.map((command, index) => (
+                    {featured.map((command, index) => (
                         <option key={index} value={command}>
                             {command}
                         </option>
                     ))}
                 </optgroup>
 
-                <optgroup label="Mod">
-                    {mod.map((command, index) => (
+                <optgroup label="Basic">
+                    {basic.map((command, index) => (
                         <option key={index} value={command}>
                             {command}
                         </option>
