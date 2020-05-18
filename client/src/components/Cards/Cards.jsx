@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, Grid, Divider, Fade, Fab, Tooltip } from "@material-ui/core";
+import { Card, CardContent, Typography, Grid, Divider, Fade, Fab, Tooltip, Slide } from "@material-ui/core";
 import cx from "classnames";
 import CodeIcon from '@material-ui/icons/Code';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
@@ -16,7 +16,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
     let imageCode;
 
     const discordLogoLong = require('../../images/discord-logo-long.png');
-    const sarcasticIntroImage = require('../../images/RipBot-wall-art.jpg');
+    const introImage = require('../../images/RipBot-wall-art.jpg');
     const nodejsLogo = require('../../images/nodejs-logo-green.png');
     const reactjsLogo = require('../../images/react-logo-blue.png');
 
@@ -32,90 +32,88 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                     </Typography>
                 </Grid>
 
-                {/* SARCASTIC INTRO TEXT AND IMAGE CONTAINER */}
+                {/* INTRO TEXT AND IMAGE CONTAINER */}
                 <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
 
-                    <Grid
-                        item
-                        component={Card}
-                        xs={12}
-                        md={5}
-                        className={cx(styles.card, styles.sarcastic_introduction)}
-                    >
-                        <CardContent>
-                            <Typography variant='h6'> What is this and what's going on? </Typography>
-                            <br />
-                            <Divider variant="middle" />
-                            <br />
-                            <Typography variant='body1' paragraph>
-                                Here at RipBot Productions, we understand that hiring the right person for your team/company is more important now than it has ever been. <br />With that in mind we have some GREAT news we have been itching to share with all of you. <br /><br />We are proud to announce that we, RipBot Productions, are just Chris.<br /> It's been just me Chris writing the whole time! <br /><br />"How amazing!" "What tom-foolery!" "What an exceptionally talented individual!" <br /><br />you're probably thinking and well you'd be correct, partner. <br />So partner, now that everyone is perfectly without exception on the same page and we all have an understanding of what is actually going on, let me be serious and tell you about RipBot, the Discord bot I created while learning Node.js.
+                    <Slide direction='right' in={true}>
+                        <Grid item component={Card} xs={12} md={5} className={cx(styles.card, styles.introduction)} >
+                            <CardContent>
+                                <Typography variant='h6'> What is this and what's going on? </Typography>
+                                <br />
+                                <Divider variant="middle" light />
+                                <br />
+                                <Typography variant='body1' paragraph>
+                                    Here at RipBot Productions, we understand that hiring the right person for your team/company is more important now than it has ever been.
+                                <br />
+                                With that in mind we have some GREAT news we have been itching to share with you all.
+                                <br />
+                                    <br />
+                                We are proud to announce that we, RipBot Productions, the fake company I just made up, is just me- Chris!
+                                <br />
+                                It's been just me the whole time!
+                                <br />
+                                    <br />
+                                "How amazing!" "What tom-foolery!" "What an exceptionally talented and fun individual!"
+                                <br />
+                                you're probably thinking and well you'd be correct, partner.
+                                <br />
+                                    <br />
+                                That's right! It's just me Chris. I made this site and the bot the site will noooot stop talking about.
+                                <br />
+                                So partner, now that everyone is perfectly without exception on the same page and we all have an understanding of what is actually going on, let me be serious and tell you about RipBot, the Discord bot I created while learning Node.js.
                         </Typography>
-                            <Divider variant="middle" />
-                        </CardContent>
-                    </Grid>
-
-                    <Grid
-                        item
-                        container
-                        className={styles.imageCard}
-
-                    >
-                        <img src={sarcasticIntroImage} alt='sarcastic-intro-image' className={styles.sarcastic_image} />
-                    </Grid>
+                                <Divider variant="middle" light />
+                            </CardContent>
+                        </Grid>
+                    </Slide>
+                    <Slide direction='left' in={true} >
+                        <Grid item container className={styles.imageCard} >
+                            <img src={introImage} alt='intro-image' className={styles.intro_image} />
+                        </Grid>
+                    </Slide>
 
                 </Grid>
 
                 {/* BOT INFORMATION TEXT AND IMAGE CONTAINER */}
-                <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
+                <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container} >
 
-                    <Grid
-                        item
-                        container
-                        className={styles.imageCard}
+                    <Slide direction='right' in={true} >
+                        <Grid item container className={styles.imageCard} >
+                            <img src={nodejsLogo} alt='nodejs-logo-image' className={styles.sarcastic_image} />
+                            <img src={reactjsLogo} alt='reactjs-logo-image' className={styles.sarcastic_image} />
+                        </Grid>
+                    </Slide>
 
-                    >
-                        <img src={nodejsLogo} alt='nodejs-logo-image' className={styles.sarcastic_image} />
-                        <img src={reactjsLogo} alt='reactjs-logo-image' className={styles.sarcastic_image} />
-                    </Grid>
-                    <Grid
-                        item
-                        component={Card}
-                        xs={12}
-                        md={5}
-                        className={cx(styles.card, styles.bot_information)}
-                    >
-                        <CardContent>
-                            <Typography variant='h6'> Okay, so what is this bot?! </Typography>
-                            <br />
-                            <Divider variant="middle" />
-                            <br />
-                            <Typography variant='body1' paragraph>
-                                My name is Chris Sexton.
-                                I made this site and the bot RipBot (RB) is a Discord bot created by me, Chris Sexton.
-                                RB was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API.
+                    <Slide direction='left' in={true}>
+                        <Grid item component={Card} xs={12} md={5} className={cx(styles.card, styles.bot_information)} >
+                            <CardContent>
+                                <Typography variant='h6'> Okay, so what is this bot you keep talking about?! </Typography>
+                                <br />
+                                <Divider variant="middle" />
+                                <br />
+                                <Typography variant='body1' paragraph>
+                                    Well, firstly my name is Chris Sexton.
+                                    I made this site and the bot, RipBot (RB), is a Discord bot created using Node.js with the assistance of the Discord.js module to help interact with the Discord API.
+                                <br />
                                 RB is hosted on Heroku and works in any discord server.
                                 RB provides assistance moderating your discord channel,
                                 along with a variety of informative and useful commands for all users.
                                 The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.
-                            
-                                Fake reviews from companies I totally made up claim RipBot is "Outstanding!" and 
-                            </Typography>
-                            <Divider variant="middle" />
-                        </CardContent>
-                    </Grid>
 
+                                Fake reviews from companies I totally made up claim RipBot is "Outstanding!" and
+                            </Typography>
+                                <Divider variant="middle" />
+                            </CardContent>
+                        </Grid>
+                    </Slide>
 
                 </Grid>
-                
+
                 {/* DISCORD INFORMATION CONTAINER */}
                 <Grid container spacing={1} direction='row' alignItems='center' className={styles.container}>
-                    <Grid
-                        item
-                        component={Card}
-                        xs={12}
-                        md={5}
-                        className={cx(styles.card, styles.discord_information)}
-                    >
+
+
+                    <Grid item component={Card} xs={12} md={5} className={cx(styles.card, styles.discord_information)}>
                         <CardContent>
                             <Typography variant='h6'>
                                 Cool! But wait what is Discord?!
@@ -124,7 +122,11 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                             <Divider variant="middle" />
                             <br />
                             <Typography variant='body1' paragraph>
-                                "A new way to chat with your communities and friends. Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out".
+                                "A new way to chat with your communities and friends.
+                                Discord is the easiest way to communicate over voice,
+                                video, and text, whether you’re part of a school club,
+                                a nightly gaming group, a worldwide art community, or
+                                just a handful of friends that want to hang out".
                             </Typography>
                             <Divider variant="middle" />
                             <Typography variant="caption" >
@@ -132,20 +134,18 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                         </Typography>
                         </CardContent>
                     </Grid>
-                    <Grid
-                        item
-                        container
-                        className={styles.imageCard}
-                    >
+
+                    <Grid item container className={styles.imageCard} >
                         <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
                     </Grid>
+
                 </Grid>
 
-
-
-            </div>)
+            </div>
+        )
     };
 
+    // // // WHEN A COMMAND IS SELECTED // // //
     if (image === 'helloGif') {
         imageGif = require('../../images/hello-command-demo.gif')
         imageCode = require('../../images/hello-command-code-preview.png')

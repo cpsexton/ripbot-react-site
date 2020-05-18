@@ -1,5 +1,7 @@
 .card {
 	margin: 1% 1% !important;
+	background-color: #3c4c53;
+
 }
 
 .container {
@@ -18,10 +20,15 @@
 
 .bot_information {
 	border-right: 10px solid #ff847c;
+	color: ghostwhite !important;
+	background-color: #ff857c41 !important;
+
 }
 
 .discord_information {
 	border-left: 10px solid #99B898;
+	background-color: rgba(153, 184, 152, 0.315) !important;
+	color: ghostwhite !important;
 }
 
 .discordlogo {
@@ -29,21 +36,18 @@
 }
 
 .placeholder {
-	color: ghostwhite;
-	margin: 30px 30px !important;
+	color: ghostwhite !important;
+	margin: 10px !important;
 }
 
-.sarcastic_introduction {
+.introduction {
 	border-left: 10px solid #fecea8;
+	background-color: #fecfa841 !important;
+	color: ghostwhite !important;
 
 }
 
-.sarcastic_image_card {
-	background-color: #2a363b;
-	width: auto;
-}
-
-.sarcastic_image {
+.intro_image {
 	max-width: 100%;
 }
 
@@ -51,7 +55,6 @@
 	border-left: 10px solid #99B898;
 	border-right: 10px solid #99B898;
 }
-
 
 .demonstration {
 	border-left: 10px solid #FF847C;
