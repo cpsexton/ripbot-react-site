@@ -15,53 +15,135 @@ const Cards = ({ command, desc, image, role, syntax }) => {
     let imageGif;
     let imageCode;
 
-    const discordLogoLong = require('../../images/discord-logo-long.png')
+    const discordLogoLong = require('../../images/discord-logo-long.png');
+    const sarcasticIntroImage = require('../../images/RipBot-wall-art.jpg');
+    const nodejsLogo = require('../../images/nodejs-logo-green.png');
+    const reactjsLogo = require('../../images/react-logo-blue.png');
 
     if (!command) {
         return (
-            <Grid container spacing={1} direction='column' alignItems='center' className={styles.container}>
+            <div className={styles.container}>
 
-                <Typography className={styles.placeholder} variant="h5" >
-                    Select a command to see how RipBot works...
-                </Typography>
-                <Grid
-                    item
-                    component={Card}
-                    xs={12}
-                    md={5}
-                    className={cx(styles.card, styles.details)}
-                >
-                    <CardContent>
-                        <Typography variant='h3' > RipBot </Typography>
-                        <Divider variant="middle" />
-                        <br />
-                        <Typography variant='h5'> What is RipBot: </Typography>
-                        <Typography variant='h6' paragraph>
-                            RipBot (RB) is a Discord bot created by me, Chris Sexton. RB was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API. RB is hosted on Heroku and works in any discord server. RB provides assistance moderating your discord channel, along with a variety of informative and useful commands for all users. The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.
-                        </Typography>
-                        <Divider variant="middle" />
-                    </CardContent>
 
-                    <CardContent>
-                        <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
-                        <Divider variant="middle" />
-                        <br />
-                        <Typography variant='h5'>
-                            What is Discord:
-                        </Typography>
-                        <Typography variant='h6' paragraph>
-                            A new way to chat with your communities and friends. Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out.
-                        </Typography>
+                {/* SELECT COMMAND CONTAINER */}
+                <Grid container spacing={1} justify='center' className={styles.container}>
+                    <Typography className={styles.placeholder} variant="caption" >
+                        Select a command to see how RipBot works...
+                    </Typography>
+                </Grid>
 
-                        <Typography variant="caption" >
-                            source discord.com
+                {/* SARCASTIC INTRO TEXT AND IMAGE CONTAINER */}
+                <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
+
+                    <Grid
+                        item
+                        component={Card}
+                        xs={12}
+                        md={5}
+                        className={cx(styles.card, styles.sarcastic_introduction)}
+                    >
+                        <CardContent>
+                            <Typography variant='h6'> What is this and what's going on? </Typography>
+                            <br />
+                            <Divider variant="middle" />
+                            <br />
+                            <Typography variant='body1' paragraph>
+                                Here at RipBot Productions, we understand that hiring the right person for your team/company is more important now than it has ever been. <br />With that in mind we have some GREAT news we have been itching to share with all of you. <br /><br />We are proud to announce that we, RipBot Productions, are just Chris.<br /> It's been just me Chris writing the whole time! <br /><br />"How amazing!" "What tom-foolery!" "What an exceptionally talented individual!" <br /><br />you're probably thinking and well you'd be correct, partner. <br />So partner, now that everyone is perfectly without exception on the same page and we all have an understanding of what is actually going on, let me be serious and tell you about RipBot, the Discord bot I created while learning Node.js.
                         </Typography>
-                    </CardContent>
+                            <Divider variant="middle" />
+                        </CardContent>
+                    </Grid>
+
+                    <Grid
+                        item
+                        container
+                        className={styles.imageCard}
+
+                    >
+                        <img src={sarcasticIntroImage} alt='sarcastic-intro-image' className={styles.sarcastic_image} />
+                    </Grid>
 
                 </Grid>
 
-            </Grid>
-        )
+                {/* BOT INFORMATION TEXT AND IMAGE CONTAINER */}
+                <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
+
+                    <Grid
+                        item
+                        container
+                        className={styles.imageCard}
+
+                    >
+                        <img src={nodejsLogo} alt='nodejs-logo-image' className={styles.sarcastic_image} />
+                        <img src={reactjsLogo} alt='reactjs-logo-image' className={styles.sarcastic_image} />
+                    </Grid>
+                    <Grid
+                        item
+                        component={Card}
+                        xs={12}
+                        md={5}
+                        className={cx(styles.card, styles.bot_information)}
+                    >
+                        <CardContent>
+                            <Typography variant='h6'> Okay, so what is this bot?! </Typography>
+                            <br />
+                            <Divider variant="middle" />
+                            <br />
+                            <Typography variant='body1' paragraph>
+                                My name is Chris Sexton.
+                                I made this site and the bot RipBot (RB) is a Discord bot created by me, Chris Sexton.
+                                RB was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API.
+                                RB is hosted on Heroku and works in any discord server.
+                                RB provides assistance moderating your discord channel,
+                                along with a variety of informative and useful commands for all users.
+                                The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.
+                            
+                                Fake reviews from companies I totally made up claim RipBot is "Outstanding!" and 
+                            </Typography>
+                            <Divider variant="middle" />
+                        </CardContent>
+                    </Grid>
+
+
+                </Grid>
+                
+                {/* DISCORD INFORMATION CONTAINER */}
+                <Grid container spacing={1} direction='row' alignItems='center' className={styles.container}>
+                    <Grid
+                        item
+                        component={Card}
+                        xs={12}
+                        md={5}
+                        className={cx(styles.card, styles.discord_information)}
+                    >
+                        <CardContent>
+                            <Typography variant='h6'>
+                                Cool! But wait what is Discord?!
+                            </Typography>
+                            <br />
+                            <Divider variant="middle" />
+                            <br />
+                            <Typography variant='body1' paragraph>
+                                "A new way to chat with your communities and friends. Discord is the easiest way to communicate over voice, video, and text, whether you’re part of a school club, a nightly gaming group, a worldwide art community, or just a handful of friends that want to hang out".
+                            </Typography>
+                            <Divider variant="middle" />
+                            <Typography variant="caption" >
+                                source discord.com
+                        </Typography>
+                        </CardContent>
+                    </Grid>
+                    <Grid
+                        item
+                        container
+                        className={styles.imageCard}
+                    >
+                        <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
+                    </Grid>
+                </Grid>
+
+
+
+            </div>)
     };
 
     if (image === 'helloGif') {
@@ -182,3 +264,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
 }
 
 export default Cards;
+
+
+
+// If you're here you must be someone I want to impress. Are you hard to impress? We'll see about that, friend.  1 I'll tell you how much I can benchpress. 2 I'll do that by first mentioning how much I can benchpress.  here goes. I guess what I'll do is. 1. I can benchpress almost about kinda an eighth of my body weight. 2! I My name is Chris Sexton and I'm a software developer. I made this site and the bot RipBot (RB) is a Discord bot created by me, Chris Sexton. RB was created using Node.js with the assistance of the Discord.js module to help interact with the Discord API. RB is hosted on Heroku and works in any discord server. RB provides assistance moderating your discord channel, along with a variety of informative and useful commands for all users. The above dropdown menu will provide descriptions, demonstrations and a peek at the code that makes it all work.

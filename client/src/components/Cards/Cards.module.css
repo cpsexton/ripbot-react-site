@@ -1,15 +1,31 @@
-.container {
-	margin: 1px 0;
-	background-color: #2A363B;
-    /* background-color: #1E6194; */
-}
-
 .card {
 	margin: 1% 1% !important;
 }
 
+.container {
+	margin: 1px 0;
+	background-color: #2a363b;
+	padding: 1px;
+	justify-content: center;
+    /* background-color: #1E6194; */
+}
+
+/* .intro_container {
+	margin: 1px 0;
+	background-color: #99B898;
+    -- background-color: #1E6194; 
+} */
+
+.bot_information {
+	border-right: 10px solid #ff847c;
+}
+
+.discord_information {
+	border-left: 10px solid #99B898;
+}
+
 .discordlogo {
-	width: 80% !important;
+	max-width: 100%;
 }
 
 .placeholder {
@@ -17,10 +33,25 @@
 	margin: 30px 30px !important;
 }
 
+.sarcastic_introduction {
+	border-left: 10px solid #fecea8;
+
+}
+
+.sarcastic_image_card {
+	background-color: #2a363b;
+	width: auto;
+}
+
+.sarcastic_image {
+	max-width: 100%;
+}
+
 .details {
 	border-left: 10px solid #99B898;
 	border-right: 10px solid #99B898;
 }
+
 
 .demonstration {
 	border-left: 10px solid #FF847C;
@@ -46,6 +77,11 @@
 
 .landingimage {
 	max-width: 770px;
+}
+
+.imageCard {
+	max-width: 350px;
+	/* margin: 2% 0 !important; */
 }
 
 @media (max-width: 770px) {
