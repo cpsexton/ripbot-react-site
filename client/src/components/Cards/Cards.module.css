@@ -9,25 +9,31 @@
 	background-color: #2a363b;
 	padding: 1px;
 	justify-content: center;
-    /* background-color: #1E6194; */
+	
+}
+.container_code {
+	margin: 1px 0;
+	background-color: #2a363b;
+	padding: 1px;
+	
+	
 }
 
-/* .intro_container {
-	margin: 1px 0;
-	background-color: #99B898;
-    -- background-color: #1E6194; 
-} */
-
 .bot_information {
-	border-right: 10px solid #ff847c;
+	border-right: 10px solid #FECEA8;
+	border-top: 1px solid #FECEA8;
+	border-left: 1px solid #FECEA8;
+	border-bottom: 1px solid #FECEA8;
 	color: ghostwhite !important;
-	background-color: #ff857c41 !important;
-
+	background-color: rgba(254, 207, 168, 0.39) !important;
 }
 
 .discord_information {
-	border-left: 10px solid #99B898;
-	background-color: rgba(153, 184, 152, 0.315) !important;
+	border-left: 10px solid #ff847c;
+	border-top: 1px solid #ff847c;
+	border-right: 1px solid #ff847c;
+	border-bottom: 1px solid #ff847c;
+	background-color: #ff857c52 !important;
 	color: ghostwhite !important;
 }
 
@@ -40,20 +46,33 @@
 	margin: 10px !important;
 }
 
-.introduction {
-	border-left: 10px solid #fecea8;
-	background-color: #fecfa841 !important;
-	color: ghostwhite !important;
-
+.sheGot {
+	max-width: 75%;
 }
 
-.intro_image {
+.sheGotTwo {
+	max-width: 75%;
+	padding: 0 !important;
+}
+
+.introduction {
+	border-left: 10px solid #99b898;
+	border-top: 1px solid #99b898;
+	border-right: 1px solid #99b898;
+	border-bottom: 1px solid #99b898;
+	background-color: #99b89846 !important;
+	color: ghostwhite !important;
+}
+
+.body_image {
 	max-width: 100%;
 }
 
 .details {
 	border-left: 10px solid #99B898;
-	border-right: 10px solid #99B898;
+	border-right: 1px solid #99B898;
+	border-top: 1px solid #99B898;
+	border-bottom: 1px solid #99B898;
 }
 
 .demonstration {
@@ -62,13 +81,17 @@
 }
 
 .code {
-	border-left: 10px solid #FECEA8;
-	border-right: 10px solid #FECEA8;
+	border-left: 10px solid #ff847c;
+	border-right: 1px solid #ff847c;
+	border-top: 1px solid #ff847c;
+	border-bottom: 1px solid #ff847c;
+	background-color: #ff857c60 !important;
+	max-width: 770px !important;
 }
 
 .image {
 	margin-top: 10px;
-	max-width: 100%;
+	width: 100%;
 }
 
 .author {
@@ -84,7 +107,7 @@
 
 .imageCard {
 	max-width: 350px;
-	/* margin: 2% 0 !important; */
+	
 }
 
 @media (max-width: 770px) {

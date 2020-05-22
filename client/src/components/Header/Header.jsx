@@ -11,11 +11,13 @@ import { CommandSelector } from "../../components";
 
 const Header = ({ handleCommandChange }) => {
 
-    const discordLogo = require('../../images/discord-logo-short.png')
+    const ripbotLogoSmall = require('../../images/ripbot-logo-hello.png');
+    const discordLogo = require('../../images/discord-logo-short.png');
     return (
 
         <AppBar position="static" >
             <Toolbar className={styles.appbar}>
+                <img src={ripbotLogoSmall} alt='ripbot logo' />
                 <Typography className={styles.title} variant="h4"> RIPBOT </Typography>
 
                 <CommandSelector handleCommandChange={handleCommandChange} />

@@ -15,15 +15,15 @@ const Cards = ({ command, desc, image, role, syntax }) => {
     let imageGif;
     let imageCode;
 
+
+    const ripbotLogoSmall = require('../../images/ripbot-transparent-logo.png');
     const discordLogoLong = require('../../images/discord-logo-long.png');
-    const introImage = require('../../images/RipBot-wall-art.jpg');
     const nodejsLogo = require('../../images/nodejs-logo-green.png');
     const reactjsLogo = require('../../images/react-logo-blue.png');
 
     if (!command) {
         return (
             <div className={styles.container}>
-
 
                 {/* SELECT COMMAND CONTAINER */}
                 <Grid container spacing={1} justify='center' className={styles.container}>
@@ -42,9 +42,9 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                                 <br />
                                 <Divider variant="middle" light />
                                 <br />
-                                <Typography variant='body1' paragraph>
+                                <Typography variant='body2' paragraph>
                                     Here at RipBot Productions, we understand that hiring the right person for your team/company is more important now than it has ever been.
-                                <br />
+                                6<br />
                                 With that in mind we have some GREAT news we have been itching to share with you all.
                                 <br />
                                     <br />
@@ -61,14 +61,14 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                                 That's right! It's just me Chris. I made this site and the bot the site will noooot stop talking about.
                                 <br />
                                 So partner, now that everyone is perfectly without exception on the same page and we all have an understanding of what is actually going on, let me be serious and tell you about RipBot, the Discord bot I created while learning Node.js.
-                        </Typography>
+                                </Typography>
                                 <Divider variant="middle" light />
                             </CardContent>
                         </Grid>
                     </Slide>
                     <Slide direction='left' in={true} >
                         <Grid item container className={styles.imageCard} >
-                            <img src={introImage} alt='intro-image' className={styles.intro_image} />
+                            <img src={ripbotLogoSmall} alt='intro-image' className={styles.body_image} />
                         </Grid>
                     </Slide>
 
@@ -79,8 +79,13 @@ const Cards = ({ command, desc, image, role, syntax }) => {
 
                     <Slide direction='right' in={true} >
                         <Grid item container className={styles.imageCard} >
-                            <img src={nodejsLogo} alt='nodejs-logo-image' className={styles.sarcastic_image} />
-                            <img src={reactjsLogo} alt='reactjs-logo-image' className={styles.sarcastic_image} />
+                            <a href="www.nodejs.com">
+                                <img src={nodejsLogo} className={styles.sheGot} alt='nodejs-logo-image' />
+                            </a>
+                            <a href="www.reactjs.com"  >
+                                <img src={reactjsLogo} className={styles.sheGotTwo} alt='reactjs-logo-image' />
+                            </a>
+
                         </Grid>
                     </Slide>
 
@@ -91,7 +96,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                                 <br />
                                 <Divider variant="middle" />
                                 <br />
-                                <Typography variant='body1' paragraph>
+                                <Typography variant='body2' paragraph>
                                     Well, firstly my name is Chris Sexton.
                                     I made this site and the bot, RipBot (RB), is a Discord bot created using Node.js with the assistance of the Discord.js module to help interact with the Discord API.
                                 <br />
@@ -112,7 +117,6 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                 {/* DISCORD INFORMATION CONTAINER */}
                 <Grid container spacing={1} direction='row' alignItems='center' className={styles.container}>
 
-
                     <Grid item component={Card} xs={12} md={5} className={cx(styles.card, styles.discord_information)}>
                         <CardContent>
                             <Typography variant='h6'>
@@ -121,7 +125,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                             <br />
                             <Divider variant="middle" />
                             <br />
-                            <Typography variant='body1' paragraph>
+                            <Typography variant='body2' paragraph>
                                 "A new way to chat with your communities and friends.
                                 Discord is the easiest way to communicate over voice,
                                 video, and text, whether you’re part of a school club,
@@ -131,7 +135,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                             <Divider variant="middle" />
                             <Typography variant="caption" >
                                 source discord.com
-                        </Typography>
+                            </Typography>
                         </CardContent>
                     </Grid>
 
@@ -180,81 +184,75 @@ const Cards = ({ command, desc, image, role, syntax }) => {
 
     return (
         <div className={cx(styles.container)}>
-            <Grid container spacing={1} justify="center">
+
+            <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
 
                 {/* DETAILS CARD */}
                 {/* DETAILS CARD */}
-                <Grid
-                    item
-                    component={Card}
-                    xs={12}
-                    md={3}
-                    className={cx(styles.card, styles.details)}
-                >
-                    <CardContent>
-                        <Typography variant="h3" color="textSecondary" >
-                            {command}
-                        </Typography>
-                        <Divider variant="middle" />
-                        <br />
-                        <Typography variant='h5'>
-                            Description:
-                        </Typography>
-                        <Typography variant='h6' paragraph>
-                            {desc}
-                        </Typography>
-                        <Typography variant='h5'>
-                            Required Role:
-                        </Typography>
-                        <Typography variant='h6'>
-                            {role}
-                        </Typography>
-                    </CardContent>
-                </Grid>
+                <Slide direction="right" in={true} >
+                    <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.introduction)} >
+                        <CardContent>
+                            <Typography variant="h6" >
+                                {command.toUpperCase()}
+                            </Typography>
+                            <Divider variant="middle" light />
+                            <br />
+                            <Typography variant='body1'>
+                                Description:
+                            </Typography>
+                            <Typography variant='body2' paragraph>
+                                {desc}
+                                <Divider variant="middle" light />
+                            </Typography>
+                            <Typography variant='body1'>
+                                Required Role:
+                            </Typography>
+                            <Typography variant='body2'>
+                                {role}
+                            </Typography>
+                            <Divider variant="middle" light />
+                        </CardContent>
+                    </Grid>
+                </Slide >
+
 
                 {/* DEMONSTRATION GIF CARD */}
                 {/* DEMONSTRATION GIF CARD */}
-                <Grid
-                    item
-                    component={Card}
-                    xs={12}
-                    md={'auto'}
-                    className={cx(styles.card, styles.demonstration)}
-                >
-                    <CardContent>
-                        <Typography variant="h5" color="textSecondary" >
-                            {syntax}
-                        </Typography>
-                        <Divider variant="middle" />
-                        <br />
-                        <img className={styles.image} src={imageGif} alt="imagegif" />
-                    </CardContent>
-                </Grid>
 
-                {/* CODE PREVIEW CARD */}
-                {/* CODE PREVIEW CARD */}
+                <Slide direction="left" in={true} >
+                    <Grid item component={Card} xs={12} md={'auto'} className={cx(styles.card, styles.bot_information)} >
+                        <CardContent>
+                            <Typography variant="h5" >
+                                {syntax}
+                            </Typography>
+                            <Divider variant="middle" />
+                            <br />
+                            <img className={styles.image} src={imageGif} alt="imagegif" />
+                        </CardContent>
+                    </Grid>
+                </Slide >
+                {/* SOURCE CODE BUTTON */}
+                {/* SOURCE CODE BUTTON */}
+            </Grid>
+
+            {/* CODE PREVIEW CARD */}
+            {/* CODE PREVIEW CARD */}
+            <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
+                <Tooltip title="peep the source code" >
+                    <Fab className={styles.button} color='default' aria-label='code' size="small" onClick={((e) => (handleChange(e.target.value)))}  >
+                        <CodeIcon />
+                    </Fab>
+                </ Tooltip>
+
                 <Fade in={clicked}>
-                    <Grid
-                        item
-                        component={Card}
-                        xs={12}
-                        md={'auto'}
-                        className={cx(styles.card, styles.code)}
-                    >
+                    <Grid item component={Card} xs={12} md={'auto'} className={cx(styles.card, styles.code)} >
                         <CardContent>
                             <img className={styles.image} src={imageCode} alt="imagecode" />
                         </ CardContent>
                     </ Grid>
                 </Fade>
 
-                {/* SOURCE CODE BUTTON */}
-                {/* SOURCE CODE BUTTON */}
-                <Tooltip title="peep the source code" >
-                    <Fab className={styles.button} color='default' aria-label='code' size="small" onClick={((e) => (handleChange(e.target.value)))}  >
-                        <CodeIcon />
-                    </Fab>
-                </ Tooltip>
-            </ Grid>
+            </Grid>
             <Typography className={styles.author} variant="caption" >
                 made with <FavoriteBorderIcon /> by Chris Sexton
             </Typography>

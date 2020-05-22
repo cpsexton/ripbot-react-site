@@ -6,6 +6,6 @@
 .appbar {
     background-color: #E84A5F;
     /* background-color: #6F213B; */
-   
+    max-height: 100px;
     justify-content: center;
 }
