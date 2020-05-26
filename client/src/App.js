@@ -29,7 +29,7 @@ class App extends React.Component {
 
     render() {
         const { name, desc, image, role, syntax } = this.state;
-        const wallArt = require('./images/RipBot-wall-art.jpg')
+        const wallArt = require('./images/RipBot-wall-art.jpg');
         return (
             <div className={styles.container}>
                 {/* <Typography color="primary" variant="h1">RipBot</Typography> */}
