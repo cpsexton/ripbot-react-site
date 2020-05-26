@@ -1,6 +1,4 @@
-//this holds all the commands and definitions
-
-
+//this holds all the command data
 
 const data = [
 

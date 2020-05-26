@@ -44,7 +44,7 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                                 <br />
                                 <Typography variant='body2' paragraph>
                                     Here at RipBot Productions, we understand that hiring the right person for your team/company is more important now than it has ever been.
-                                6<br />
+                                <br />
                                 With that in mind we have some GREAT news we have been itching to share with you all.
                                 <br />
                                     <br />
@@ -215,10 +215,8 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                     </Grid>
                 </Slide >
 
-
                 {/* DEMONSTRATION GIF CARD */}
                 {/* DEMONSTRATION GIF CARD */}
-
                 <Slide direction="left" in={true} >
                     <Grid item component={Card} xs={12} md={'auto'} className={cx(styles.card, styles.bot_information)} >
                         <CardContent>
@@ -231,13 +229,14 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                         </CardContent>
                     </Grid>
                 </Slide >
-                {/* SOURCE CODE BUTTON */}
-                {/* SOURCE CODE BUTTON */}
             </Grid>
 
             {/* CODE PREVIEW CARD */}
             {/* CODE PREVIEW CARD */}
             <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container}>
+
+                {/* SOURCE CODE BUTTON */}
+                {/* SOURCE CODE BUTTON */}
                 <Tooltip title="peep the source code" >
                     <Fab className={styles.button} color='default' aria-label='code' size="small" onClick={((e) => (handleChange(e.target.value)))}  >
                         <CodeIcon />
