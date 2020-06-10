@@ -15,7 +15,6 @@ const CommandSelector = ({ handleCommandChange }) => {
                 id="grouped native-select"
                 onChange={
                     (e) => (
-                        console.log('Command selected from menu was: ' + e.target.value),
                         handleCommandChange(e.target.value)
                     )
                 }

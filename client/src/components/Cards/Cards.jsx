@@ -27,12 +27,15 @@ const Cards = ({ command, desc, image, role, syntax }) => {
 
                 {/* SELECT COMMAND CONTAINER */}
                 <Grid container spacing={1} justify='center' className={styles.container}>
-                    <Typography className={styles.placeholder} variant="caption" >
+                    <Typography className={styles.selectcommandtext} variant="caption" >
                         Select a command to see how RipBot works...
                     </Typography>
                 </Grid>
-
-
+                <Grid container spacing={1} justify='center' className={styles.container}>
+                    <Typography className={styles.underconstructiontext} variant="caption" color="error">
+                        (still under construction..some commands not finished)
+                    </Typography>
+                </Grid>
 
                 {/* BOT INFORMATION TEXT AND IMAGE CONTAINER */}
                 <Grid container spacing={1} direction='inline-row' alignItems='center' className={styles.container} >

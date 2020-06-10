@@ -41,8 +41,12 @@
 	max-width: 100%;
 }
 
-.placeholder {
+.selectcommandtext {
 	color: ghostwhite !important;
+	margin: 10px !important;
+}
+
+.underconstructiontext {
 	margin: 10px !important;
 }
 
