@@ -75,31 +75,35 @@ const Cards = ({ command, desc, image, role, syntax }) => {
                 {/* DISCORD INFORMATION CONTAINER */}
                 <Grid container spacing={1} direction='row' alignItems='center' className={styles.container}>
 
-                    <Grid item component={Card} xs={12} md={5} className={cx(styles.card, styles.discord_information)}>
-                        <CardContent>
-                            <Typography variant='h6'>
-                                Cool! But wait what is Discord?!
-                            </Typography>
-                            <br />
-                            <Divider variant="middle" />
-                            <br />
-                            <Typography variant='body2' paragraph>
-                                "A new way to chat with your communities and friends.
-                                Discord is the easiest way to communicate over voice,
-                                video, and text, whether you’re part of a school club,
-                                a nightly gaming group, a worldwide art community, or
-                                just a handful of friends that want to hang out".
-                            </Typography>
-                            <Divider variant="middle" />
-                            <Typography variant="caption" >
-                                source discord.com
-                            </Typography>
-                        </CardContent>
-                    </Grid>
+                    <Slide direction='right' in={true}>
+                        <Grid item component={Card} xs={12} md={5} className={cx(styles.card, styles.discord_information)}>
+                            <CardContent>
+                                <Typography variant='h6'>
+                                    Cool! But wait what is Discord?!
+                                </Typography>
+                                <br />
+                                <Divider variant="middle" />
+                                <br />
+                                <Typography variant='body2' paragraph>
+                                    "A new way to chat with your communities and friends.
+                                    Discord is the easiest way to communicate over voice,
+                                    video, and text, whether you’re part of a school club,
+                                    a nightly gaming group, a worldwide art community, or
+                                    just a handful of friends that want to hang out".
+                                </Typography>
+                                <Divider variant="middle" />
+                                <Typography variant="caption" >
+                                    source discord.com
+                                </Typography>
+                            </CardContent>
+                        </Grid>
+                    </Slide>
 
-                    <Grid item container className={styles.imageCard} >
-                        <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
-                    </Grid>
+                    <Slide direction='left' in={true}>
+                        <Grid item container className={styles.imageCard} >
+                            <img className={styles.discordlogo} src={discordLogoLong} alt="discord logo long" />
+                        </Grid>
+                    </Slide>
 
                 </Grid>
 
