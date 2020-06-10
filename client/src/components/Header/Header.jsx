@@ -24,25 +24,25 @@ const Header = ({ handleCommandChange }) => {
                 <CommandSelector handleCommandChange={handleCommandChange} />
 
                 <Tooltip title="Me on GitHub" >
-                    <IconButton color="inherit" aria-label='github link' size="medium" href="www.github.com/cpsexton">
+                    <IconButton color="inherit" aria-label='github link' size="medium" href="https://github.com/cpsexton">
                         <GitHubIcon />
                     </IconButton>
                 </ Tooltip>
 
                 <Tooltip title="My projects on YouTube" >
-                    <IconButton color="inherit" aria-label='youtube link' size="medium" href="www.youtube.com/MYUTUBE">
+                    <IconButton color="inherit" aria-label='youtube link' size="medium" href="https://www.youtube.com/channel/UCrFIrWj1f5XFz7Ey1QvwfJw">
                         <YouTubeIcon />
                     </IconButton>
                 </ Tooltip>
 
                 <Tooltip title="Me on LinkedIn" >
-                    <IconButton color="inherit" aria-label='linkedin link' size="medium" href="www.linkedin.com/cpsexton">
+                    <IconButton color="inherit" aria-label='linkedin link' size="medium" href="https://www.linkedin.com/in/cpsexton/">
                         <LinkedInIcon />
                     </IconButton>
                 </ Tooltip>
 
                 <Tooltip title="Check out Discord" >
-                    <Button href="www.discord.com" >
+                    <Button href="https://discord.com/" >
                         <img width='30px' src={discordLogo} alt='discord logo' />
                     </Button>
                 </Tooltip>
